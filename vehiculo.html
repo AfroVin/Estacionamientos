@@ -12,63 +12,65 @@
     <link rel="stylesheet" href="Css\StyleForm.css">
 
   </head>
+
+  <header>
+    <button type="button" class="btn btn-secondary" id="btnRegistrar">volver</button>
+  </header>
   <body>
       
-
-<div class="container" >
-
-
-
-    <div class="col-lg-8">
-
-        <h2>Registro de Vehiculo</h2>
-        <br><br>
-        <form action="" id="formVehiculo">
-            <fieldset>
-              <div class="col-sm-6">
-                <label for="" class="form-label">Marca</label>
-                <input type="text" class="form-control" id="marca" placeholder="Ingresar Marca del Vehiculo" >
-               
-              </div>
-              </fieldset>
-              <br>
-              <div class="col-sm-6">
-                <label for="Modelo" class="form-label">Modelo</label>
-                <input type="text" class="form-control" id="modelo" placeholder="Ingresar Modelo del Vehiculo" value="" >
-                
-              </div>
-                <br>
+    <div class="container">  
+      <form id="contact" action="" method="post">
+        <h3>Registro Vehiculo</h3>
+        <br>
+        <div class="col-lg-6">
+          <label for="" class="form-label">Marca</label>
+          <input type="text" class="form-control" id="marca" placeholder="Ingresar Marca del Vehiculo" >
+         
+        </div>
+        </fieldset>
+        <br>
+        <div class="col-lg-6">
+          <label for="Modelo" class="form-label">Modelo</label>
+          <input type="text" class="form-control" id="modelo" placeholder="Ingresar Modelo del Vehiculo" value="" >
+          
+        </div>
+          <br>
+        
+          <div class="col-lg-6">
+              <label for="anno" class="form-label">Año</label>
+              <input type="text" class="form-control" id="anno" placeholder="Ingresar Año del Vehiculo" value="" >
               
-                <div class="col-sm-6">
-                    <label for="anno" class="form-label">Año</label>
-                    <input type="text" class="form-control" id="anno" placeholder="Ingresar Año del Vehiculo" value="" >
-                    
-                  </div>
-                  <br>
-                  
-              <div class="col-sm-6">
-                <label for="Modelo" class="form-label">Color</label>
-                <input type="text" class="form-control" id="color" placeholder="Ingresar Color del Vehiculo" value="" >
-                
-              </div>
-              <br>
-              
-              <div class="col-sm-6">
-                <label for="Modelo" class="form-label">Patente</label>
-                <input type="text" class="form-control" id="patente" placeholder="Ingresar Patente del Vehiculo" value="" >
-                
-              </div>
-              
+            </div>
+            <br>
+            
+        <div class="col-lg-6">
+          <label for="Modelo" class="form-label">Color</label>
+          <input type="text" class="form-control" id="color" placeholder="Ingresar Color del Vehiculo" value="" >
+          
+        </div>
+        <br>
+        
+        <div class="col-lg-6">
+          <label for="Modelo" class="form-label">Patente</label>
+          <input type="text" class="form-control" id="patente" placeholder="Ingresar Patente del Vehiculo" value="" >
+          
+          
+        </div>
+        <div class="col-lg-12" >
+          <button type="submit" value="aceptar" class="btn btn-secondary" id="btnRegistrar">Registrar</button>
+          
+
+      </div>
+
+      </div>
+      <br><br>
+      
+      </form>
+     
   
-            </div>
-            <br><br>
-            <div >
-                <button type="submit" value="aceptar" class="btn btn-secondary" id="btnRegistrar">Registrar</button>
-                <button type="button" class="btn btn-secondary" id="btnRegistrar">Cancelar</button>
-
-            </div>
-          </form>
     </div>
+
+
 
 
 
