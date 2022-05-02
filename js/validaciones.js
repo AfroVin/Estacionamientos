@@ -35,11 +35,13 @@ function valContra(){
 }
 
 function valCode(){
-  document.getElementById("nav2").innerHTML="";
+  
   var correo3 = document.rec2.code.value;
   
   if (correo3 =="1234"){
-    window.location.assign("https://www.w3schools.com")
+    const path = location.pathname;
+    const pathNav = path.slice(1,-20)+'recuperarContra2.html';
+     window.location.assign(pathNav);
         
 
     }
