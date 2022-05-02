@@ -23,6 +23,7 @@ function Login() {
 
 };
 
+//validaciones recuperar contrasena
 function valContra(){
   
   var correo2 = document.rec.correoContra.value;
@@ -48,8 +49,29 @@ function valCode(){
     if (correo3!="1234"){
       window.alert('Codigo Invalido')
 
-    }
+    }  
+}
+
+function valContra2(){
+  document.getElementById("p1").innerHTML= 
+    ""
   
+  var pass1= document.contra2.pass1.value;
+  var pass2= document.contra2.pass2.value;
+  
+
+  if (pass1 != pass2){
+
+    document.getElementById("p1").innerHTML+= 
+    "<p>La contraseña no coincide</p>"
+  }
+  if (pass1 == pass2){
+    const path = location.pathname;
+        const pathNav = path.slice(1,-21)+'login.html';
+         window.location.assign(pathNav);
+
+  }
+
 }
 
 
