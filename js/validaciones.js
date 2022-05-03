@@ -23,7 +23,7 @@ function Login() {
 
 };
 
-//validaciones recuperar contrasena
+//validaciones correo recuperar contrasena
 function valContra(){
   
   var correo2 = document.rec.correoContra.value;
@@ -34,6 +34,8 @@ function valContra(){
     window.alert('Se ha enviado el codigo al correo')
 }
 }
+
+//validacion del codigo recuperar contrasena
 
 function valCode(){
   
@@ -51,7 +53,7 @@ function valCode(){
 
     }  
 }
-
+// Validacion de Recuperar contrasena
 function valContra2(){
   document.getElementById("p1").innerHTML= 
     ""
@@ -59,13 +61,25 @@ function valContra2(){
   var pass1= document.contra2.pass1.value;
   var pass2= document.contra2.pass2.value;
   
+  if (pass1.trim()!=pass1){
 
+    window.alert("No puede contener espacios en blanco")
+  }
+  if (pass1.length==0){
+
+    window.alert("Debe ingresar una contraseña")
+  }
+  if (pass1.length<10){
+
+    window.alert("Minimo 10 caracteres")
+  }
+  
   if (pass1 != pass2){
 
     document.getElementById("p1").innerHTML+= 
     "<p>La contraseña no coincide</p>"
   }
-  if (pass1 == pass2){
+  if (pass1 == pass2 && pass1.trim()==pass1 && pass1.length>=10){
     const path = location.pathname;
         const pathNav = path.slice(1,-21)+'login.html';
          window.location.assign(pathNav);
