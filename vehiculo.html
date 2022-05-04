@@ -93,44 +93,31 @@
     <div class="container">  
       <form id="contact" action="" method="post">
         <h3>Registro Vehiculo</h3>
-        <br>
-        <div class="col-lg-6">
-          <label for="" class="form-label">Marca</label>
-          <input type="text" class="form-control" id="marca" placeholder="Ingresar Marca del Vehiculo" >
-         
-        </div>
+        <fieldset>
+          <label for="Marca" class="form-label">Marca</label>
+          <input type="text" class="form-control" id="marca" placeholder="Marca" >
+        </fieldset>
+        <fieldset>
+          <label for="Modelo" class="form-label">Modelo</label>
+          <input type="text" class="form-control" id="modelo" placeholder=" Modelo" value="" >
+        </fieldset>
+        <fieldset>
+          <label for="Año vehiculo" class="form-label">Año</label>
+          <input type="text" class="form-control" id="anno" placeholder="Año del Vehiculo" value="" >
+        </fieldset>
+        <fieldset>
+          <label for="Color" class="form-label">Color</label>
+          <input type="text" class="form-control" id="color" placeholder="Color" value="" >
+        </fieldset>
+        <fieldset>
+          <label for="Patente" class="form-label">Patente</label>
+          <input type="text" class="form-control" id="patente" placeholder="Ingresar Patente del Vehiculo" value="" >
         </fieldset>
         <br>
-        <div class="col-lg-6">
-          <label for="Modelo" class="form-label">Modelo</label>
-          <input type="text" class="form-control" id="modelo" placeholder="Ingresar Modelo del Vehiculo" value="" >
-          
-        </div>
-          <br>
+        <fieldset>
+          <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Registrar estacionamiento</button>
+        </fieldset>
         
-          <div class="col-lg-6">
-              <label for="anno" class="form-label">Año</label>
-              <input type="text" class="form-control" id="anno" placeholder="Ingresar Año del Vehiculo" value="" >
-              
-            </div>
-            <br>
-            
-        <div class="col-lg-6">
-          <label for="Modelo" class="form-label">Color</label>
-          <input type="text" class="form-control" id="color" placeholder="Ingresar Color del Vehiculo" value="" >
-          
-        </div>
-        <br>
-        
-        <div class="col-lg-6">
-          <label for="Modelo" class="form-label">Patente</label>
-          <input type="text" class="form-control" id="patente" placeholder="Ingresar Patente del Vehiculo" value="" >
-          
-          
-        </div>
-        <div class="col-lg-12" >
-          <button type="submit" value="aceptar" class="btn btn-secondary" id="btnRegistrar">Registrar</button>
-          
       </form>
       </div>
 
