@@ -17,16 +17,19 @@
       <h3>Crear cuenta</h3>
       <h4>Completa todos los datos obligatorios*</h4>
       <fieldset>
+        <label for="Nombre"> Nombre </label>
         <input placeholder="Nombre" type="text" tabindex="1" required="" pattern="[a-zA-Z]+">
       </fieldset>
       <fieldset>
+        <label for="Apellido"> Apellido </label>
         <input placeholder="Apellido" type="text" tabindex="2" required="" pattern="[a-zA-Z]+">
       </fieldset>
       <fieldset>
-        <label for="Rut"> Rut </label>
+        <label for="Telefono"> Telefono </label>
         <input placeholder="12345678-9" type="text" tabindex="3" required="" pattern="[0-9]+">
       </fieldset>
       <fieldset>
+        <label for="Correo"> Correo </label>
         <input placeholder="Correo" type="email" tabindex="4" required>
       </fieldset>
       <fieldset>
@@ -35,15 +38,9 @@
                 maxlength="9" minlength="1">
       </fieldset>
       <fieldset>
+        <label for="Contraseña"> Contraseña </label>
         <input placeholder="Contraseña" type="text" tabindex="6" required="" 
         pattern="(?=.*\d)(?=.*[a-záéíóúüñ]).*[A-ZÁÉÍÓÚÜÑ].*" maxlength="20" minlength="12" title="Debe tener al menos una mayúscula, una minúscula y un dígito">
-        <ul>
-          <li><a >La contraseña debe contener:</a></li>
-          <li><a >Longitud de minimo 12 caracteres y maximo 20</a></li>
-          <li><a >Una letra mayuscula</a></li>
-          <li><a >Una letra minuscula</a></li>
-          <li><a >Un numero</a></li>
-        </ul>
       </fieldset>
       <fieldset>
         <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Crear cuenta</button>
