@@ -88,6 +88,120 @@ function valContra2(){
 
 }
 
+//Funcion para bloquear los input
+
+function valLetras(e){
+  var key= e.keyCode || e.wich,
+    tecla =String.fromCharCode(key).toLowerCase(),
+    letras = "áéíóúabcdefghijklmnñopqrstuvwxyz ",
+    especiales = [8, 37, 39, 46],
+    tecla_especial = false;
+
+    for (var i in especiales) {
+      if (key == especiales[i]){
+        tecla_especial = true;
+        break;
+      }
+    }
+
+    if (letras.indexOf(tecla)==-1 && !tecla_especial){
+      return false;
+    }
+}
+function valLetraNum(e){
+  var key= e.keyCode || e.wich,
+    tecla =String.fromCharCode(key).toLowerCase(),
+    letras = "áéíóúabcdefghijklmnñopqrstuvwxyz 1234567890",
+    especiales = [8, 37, 39, 46],
+    tecla_especial = false;
+
+    for (var i in especiales) {
+      if (key == especiales[i]){
+        tecla_especial = true;
+        break;
+      }
+    }
+
+    if (letras.indexOf(tecla)==-1 && !tecla_especial){
+      return false;
+    }
+}
+function valNum(e){
+  var key= e.keyCode || e.wich,
+    tecla =String.fromCharCode(key).toLowerCase(),
+    letras = "12456890",
+    especiales = [8, 37, 39, 46],
+    tecla_especial = false;
+
+    for (var i in especiales) {
+      if (key == especiales[i]){
+        tecla_especial = true;
+        break;
+      }
+    }
+
+    if (letras.indexOf(tecla)==-1 && !tecla_especial){
+      return false;
+    }
+}
+
+
+//validacion registro de estacionamiento
+
+function valEstacionamiento(){
+
+var ciudad= document.getElementById("ciudad").value;
+var comuna= document.getElementById("comuna").value;
+var calle= document.getElementById("calle").value;
+var num= document.getElementById("numero").value;
+
+
+
+if(ciudad=="" || ciudad.trim()!=ciudad || ciudad.length>30 || ciudad.length<=6){
+
+  document.getElementById("p1").innerHTML = "<p>Debe ingresar una ciudad valida</p>"
+}else {
+  document.getElementById("p1").innerHTML = ""
+
+}
+
+if(comuna==""){
+  document.getElementById("p2").innerHTML = "<p>Debe seleccionar una comuna</p>"
+}else {
+  document.getElementById("p2").innerHTML = ""
+
+}
+if(calle=="" || calle.trim()!=calle || calle.length>30 || calle.length<=0){
+
+  document.getElementById("p3").innerHTML = "<p>Debe ingresar una calle valida</p>"
+}else {
+  document.getElementById("p3").innerHTML = ""
+
+}
+if(num=="" || num.trim()!=num || num.length>6 || num.length<=0){
+
+  document.getElementById("p4").innerHTML = "<p> Debe ingresar un numero valido</p>"
+
+}
+else {
+  document.getElementById("p4").innerHTML = ""
+
+}
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
 
 
 

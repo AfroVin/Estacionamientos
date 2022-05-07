@@ -90,17 +90,18 @@
   <body>
     <link rel="stylesheet" href="Css\StyleForm.css">
 <div class="container">  
-    <form id="contact" action="" method="post">
+    <form name="est" id="contact" action="" method="post">
       <h3>Registrar estacionamiento</h3>
-      <h4>Completa todos los datos obligatorios*</h4>
+      <h4>Completa todos los datos para poder registrar tu estacionamiento</h4>
         <!--DATOS OBLIGATORIOS -->
       <fieldset>
-        <input placeholder="Ciudad" type="text" tabindex="1" required autofocus>
+        <input value="" onkeypress="return valLetras(event)" id="ciudad"  placeholder="Ciudad" type="text" tabindex="1" >
+        <p id="p1" style="color: red"></p>
       </fieldset>
       <label class="custom-control-label" for="comuna">Comuna</label>
       <br>
       <select class="custom-select" id="comuna">
-        <option selected>Seleccione la comuna</option>
+        <option selected value="">Seleccione la comuna</option>
         <option value="1">Santiago</option>
         <option value="2">Conchali</option>
         <option value="3">Huechuraba</option>
@@ -134,42 +135,49 @@
         <option value="31">Pudahuel</option>
         <option value="32">Quinta Normal</option>
         </select>
+        <p id="p2" style="color: red"></p>
       <fieldset>
-        <input placeholder="Calle" type="text" tabindex="2" required autofocus>
+        <input id="calle" maxlength="30" onkeypress="return valLetras(event)" placeholder="Calle" type="text" tabindex="2" >
+        <p id="p3" style="color: red"></p>
+
       </fieldset>
       <fieldset>
-        <input placeholder="Numero" type="text" tabindex="3" required>
+        <input id="numero" onkeypress="return valNum(event)" placeholder="Numero" type="text" tabindex="3" >
+        <p id="p4" style="color: red"></p>
+
       </fieldset>
       
-      <fieldset>
-        <input type="radio" id="Casa" name="customRadio" class="custom-control-input">
+      <fieldset selected value="" id="rdDireccion">
+        <input value="casa" type="radio" id="Casa" name="customRadio" class="custom-control-input">
         <label class="custom-control-label" for="Casa">Casa</label>
         <br>
-        <input type="radio" id="Edificio" name="customRadio" class="custom-control-input">
+        <input value="edificio" type="radio" id="Edificio" name="customRadio" class="custom-control-input">
         <label class="custom-control-label" for="Edificio">Edificio</label>
         <br>
-        <input type="radio" id="Block" name="customRadio" class="custom-control-input">
-        <label class="custom-control-label" for="Block">Block (Poblacion)</label>
+        <input value="block" type="radio" id="Block" name="customRadio" class="custom-control-input">
+        <label class="custom-control-label" for="Block">Block </label>
+        <p id="p5" style="color: red"></p>
+
       </fieldset>
       <!--DATOS OPCIONALES -->
       <h4> Datos opcionales</h4>
       <fieldset>
-        <input placeholder="Numero de estacionamiento" type="text" name="numero_estacionamiento" id="numero_estacionamiento" class="form-control optional">
+        <input onkeypress="return valNum(event)" placeholder="Numero de estacionamiento" type="text" name="numero_estacionamiento" id="numero_estacionamiento" class="form-control optional">
       </fieldset>
       <fieldset>
-        <input placeholder="Tipo de estacionamiento" type="text" name="tipo_estacionamiento" id="tipo_estacionamiento" class="form-control optional">
+        <input onkeypress="return valLetras(event)" placeholder="Tipo de estacionamiento" type="text" name="tipo_estacionamiento" id="tipo_estacionamiento" class="form-control optional">
       </fieldset>
       <fieldset>
-        <input placeholder="Nivel de estacionamiento" type="text" name="nivel_estacionamiento" id="nivel_estacionamiento" class="form-control optional">
+        <input onkeypress="return valLetraNum(event)" placeholder="Nivel de estacionamiento" type="text" name="nivel_estacionamiento" id="nivel_estacionamiento" class="form-control optional">
       </fieldset>
       <fieldset>
-        <input type="text" name="caracteristicas" id="caracteristicas" class="form-control optional" placeholder="Caracteristicas del estacionamiento"
+        <input type="text" onkeypress="return valLetraNum(event)" name="caracteristicas" id="caracteristicas" class="form-control optional" placeholder="Caracteristicas del estacionamiento"
         rows="3">
         <p> Añade informacion adicional sobre ti o sobre tu estacionamiento para que las personas
           tengan una mejor vision sobre tu Estacionamiento </p>
       </fieldset>
       <fieldset>
-        <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Registrar estacionamiento</button>
+        <p name="submit" onclick= valEstacionamiento() class="btn btn-submit" id="contact-submit" >Registrar estacionamiento</p>
       </fieldset>
       
     </form>
@@ -177,9 +185,7 @@
 
   </div>
 
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="js/validaciones.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
