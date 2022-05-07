@@ -9,7 +9,6 @@
 	-webkit-font-smoothing:antialiased;
 	-moz-font-smoothing:antialiased;
 	-o-font-smoothing:antialiased;
-	font-smoothing:antialiased;
 	text-rendering:optimizeLegibility;
 }
 
@@ -27,6 +26,13 @@ body {
 	width:100%;
 	margin:0 auto;
 	position:relative;
+}
+
+.container2{
+	width: 700px;
+	height:100px;
+	margin:0 auto;
+
 }
 
 #contact input[type="text"], #contact input[type="email"], #contact input[type="tel"],#contact input[type="pas"], #contact input[type="url"], #contact textarea, #contact button[type="submit"] { font:400 12px/16px "Open Sans", Helvetica, Arial, sans-serif; }
@@ -49,6 +55,15 @@ body {
 	display:block;
 	font-size:13px;
 }
+.letra-home{
+	color: #023574;
+	display: block;
+	font-size: 18px;
+	font-weight: 400;
+	text-align: center;
+	margin: 3px;
+
+}
 
 fieldset {
 	border: medium none !important;
@@ -58,7 +73,7 @@ fieldset {
 	width: 100%;
 }
 
-#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea {
+#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea, #contact input[type="password"] {
 	width:100%;
 	border:1px solid #CCC;
 	background:#FFF;
@@ -76,7 +91,7 @@ fieldset {
 #contact textarea {
 	height:100px;
 	max-width:100%;
-  resize:none;
+  	resize:none;
 }
 
 #contact button[type="submit"] {
@@ -114,4 +129,30 @@ fieldset {
 }
 :-ms-input-placeholder {
  color:#888;
+}
+.volveralinicio{
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	font-weight: 400;
+	margin-left: 120px;
+	font-size:13px;
+	display: block;
+}
+.recuperarcontraseña{
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	font-weight: 400;
+	margin-left: 100px;
+	font-size:13px;
+	display: block;
+}
+.centro{
+	text-align: center;
+}
+.img-home{
+	width: 100%;
+	
+}
+footer{
+	background-color:#FFCC00;
+	margin-top: 90px;
+	height: 50px;
 }
